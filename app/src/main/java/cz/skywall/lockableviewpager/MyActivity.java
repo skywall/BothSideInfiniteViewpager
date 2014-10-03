@@ -97,70 +97,6 @@ public class MyActivity extends ActionBarActivity {
         }
     };
 
-
-    // Dummy class which provides some data
-    public class Data {
-
-        ArrayList<String> strings = new ArrayList<String>();
-
-        public Data() {
-            initStrings();
-        }
-
-        public void initStrings() {
-            strings.add("A");
-            strings.add("B");
-            strings.add("C");
-            strings.add("D");
-            strings.add("E");
-            strings.add("F");
-            strings.add("G");
-            strings.add("H");
-            strings.add("CH");
-            strings.add("I");
-            strings.add("J");
-            strings.add("K");
-            strings.add("L");
-            strings.add("M");
-            strings.add("A");
-            strings.add("B");
-            strings.add("C");
-            strings.add("D");
-            strings.add("E");
-            strings.add("F");
-            strings.add("G");
-            strings.add("H");
-            strings.add("CH");
-            strings.add("I");
-            strings.add("J");
-            strings.add("K");
-            strings.add("L");
-            strings.add("M");
-            strings.add("A");
-            strings.add("B");
-            strings.add("C");
-            strings.add("D");
-            strings.add("E");
-            strings.add("F");
-            strings.add("G");
-            strings.add("H");
-            strings.add("CH");
-            strings.add("I");
-            strings.add("J");
-            strings.add("K");
-            strings.add("L");
-            strings.add("M");
-        }
-
-        public String getMyString(int pos) {
-            if (pos < 0 || pos >= strings.size()) {
-                return null;
-            }
-            return strings.get(pos);
-        }
-    }
-
-
     public class CalendarPA extends FragmentStatePagerAdapter {
 
         ArrayList<DummyFragment> mPagerFragments;
@@ -227,6 +163,11 @@ public class MyActivity extends ActionBarActivity {
             return POSITION_NONE;
         }
 
+        /**
+         * Method to translate viewpager's page position to data position
+         * @param position page
+         * @return return data position
+         */
         public int positionToDataPosition(int position) {
             int temp = defaultPage - position;
             return defaultDataPos + temp;
